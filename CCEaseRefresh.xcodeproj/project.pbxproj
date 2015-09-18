@@ -14,6 +14,7 @@
 		7EB5F4231BAC3D5F00EF7A25 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EB5F4221BAC3D5F00EF7A25 /* Images.xcassets */; };
 		7EB5F4261BAC3D5F00EF7A25 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EB5F4241BAC3D5F00EF7A25 /* LaunchScreen.xib */; };
 		7EB5F4321BAC3D5F00EF7A25 /* CCEaseRefreshTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EB5F4311BAC3D5F00EF7A25 /* CCEaseRefreshTests.m */; };
+		7EB5F43E1BAC3DF600EF7A25 /* CCEaseRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EB5F43D1BAC3DF600EF7A25 /* CCEaseRefresh.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		7EB5F42B1BAC3D5F00EF7A25 /* CCEaseRefreshTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CCEaseRefreshTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EB5F4301BAC3D5F00EF7A25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7EB5F4311BAC3D5F00EF7A25 /* CCEaseRefreshTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCEaseRefreshTests.m; sourceTree = "<group>"; };
+		7EB5F43C1BAC3DF600EF7A25 /* CCEaseRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCEaseRefresh.h; sourceTree = "<group>"; };
+		7EB5F43D1BAC3DF600EF7A25 /* CCEaseRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCEaseRefresh.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,7 @@
 		7EB5F4141BAC3D5F00EF7A25 /* CCEaseRefresh */ = {
 			isa = PBXGroup;
 			children = (
+				7EB5F43B1BAC3DF600EF7A25 /* CCEaseRefresh */,
 				7EB5F4191BAC3D5F00EF7A25 /* AppDelegate.h */,
 				7EB5F41A1BAC3D5F00EF7A25 /* AppDelegate.m */,
 				7EB5F41C1BAC3D5F00EF7A25 /* ViewController.h */,
@@ -117,6 +121,15 @@
 				7EB5F4301BAC3D5F00EF7A25 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7EB5F43B1BAC3DF600EF7A25 /* CCEaseRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				7EB5F43C1BAC3DF600EF7A25 /* CCEaseRefresh.h */,
+				7EB5F43D1BAC3DF600EF7A25 /* CCEaseRefresh.m */,
+			);
+			path = CCEaseRefresh;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,6 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7EB5F41E1BAC3D5F00EF7A25 /* ViewController.m in Sources */,
+				7EB5F43E1BAC3DF600EF7A25 /* CCEaseRefresh.m in Sources */,
 				7EB5F41B1BAC3D5F00EF7A25 /* AppDelegate.m in Sources */,
 				7EB5F4181BAC3D5F00EF7A25 /* main.m in Sources */,
 			);
@@ -348,6 +362,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CCEaseRefresh/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -358,6 +373,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CCEaseRefresh/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -416,6 +432,7 @@
 				7EB5F4371BAC3D5F00EF7A25 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7EB5F4381BAC3D5F00EF7A25 /* Build configuration list for PBXNativeTarget "CCEaseRefreshTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +441,7 @@
 				7EB5F43A1BAC3D5F00EF7A25 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

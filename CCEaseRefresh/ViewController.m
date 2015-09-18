@@ -1,14 +1,18 @@
 //
 //  ViewController.m
-//  CCEaseRefresh
+//  NetEaseRefresh
 //
-//  Created by LiuZechen on 15/9/18.
-//  Copyright (c) 2015年 LiuZechen qq:1040981145. All rights reserved.
+//  Created by v－ling on 15/9/18.
+//  Copyright (c) 2015年 LiuZeChen. All rights reserved.
 //
 
 #import "ViewController.h"
+#import "CCEaseRefresh.h"
 
 @interface ViewController ()
+
+@property (weak, nonatomic)   IBOutlet UITableView *tableView;
+@property (strong, nonatomic) CCEaseRefresh *refreshView;
 
 @end
 
@@ -16,12 +20,29 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    self.title = @"CCEaseRefresh";
+    self.tableView.tableFooterView = [UIView new];
+    self.tableView.contentInset = UIEdgeInsetsMake(64, 0, 0, 0);
+    self.tableView.scrollIndicatorInsets = UIEdgeInsetsMake(64, 0, 0, 0);
+    
+    self.refreshView = [[CCEaseRefresh alloc] initInScrollView:self.tableView];
+    [self.refreshView addTarget:self action:@selector(dropViewDidBeginRefreshing:) forControlEvents:UIControlEventValueChanged];
+    
+    UIImage *dabai = [UIImage imageNamed:@"dabai.jpg"];
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, dabai.size.height)];
+    imageView.contentMode = UIViewContentModeScaleAspectFill;
+    imageView.clipsToBounds = YES;
+    imageView.image = dabai;
+    self.tableView.tableHeaderView = imageView;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)dropViewDidBeginRefreshing:(CCEaseRefresh *)refreshControl {
+    double delayInSeconds = 3.0;
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        [refreshControl endRefreshing];
+    });
 }
 
 @end
