@@ -77,7 +77,7 @@
     CGSize textSize = [_lastUpdateTimeString boundingRectWithSize:CGSizeMake(MAXFLOAT, MAXFLOAT) options:NSStringDrawingUsesFontLeading | NSStringDrawingUsesLineFragmentOrigin attributes:dict context:nil].size;
     CGFloat textWidth  = textSize.width;
     CGFloat textHeight = textSize.height;
-    if (!_textY) {
+    if (_textY == 0) {
         _textY = self.frame.size.height - textHeight - kSubviewEdage;
     }
     [_lastUpdateTimeString drawAtPoint:CGPointMake((self.frame.size.width - textWidth) / 2, _textY) withAttributes:dict];
@@ -115,21 +115,20 @@
         // offset
         _currentOffsetY = [[change valueForKey:NSKeyValueChangeNewKey] CGPointValue].y;
         // 判断是否可以进入刷新状态
-        if (_refreshState == CCEaseRefreshStateLoading) {return;}
+        CGFloat newOffsetThreshold = -_originalContentInset.top;
 
-        CGFloat newOffsetThreshold = self.frame.origin.y;
+        if (_refreshState == CCEaseRefreshStateLoading || _currentOffsetY > newOffsetThreshold) {return;}
 
         if (!self.scrollView.isDragging && _refreshState == CCEaseRefreshStateTrigger) {
             self.refreshState = CCEaseRefreshStateLoading;
-        }else if (fabs(_currentOffsetY) - newOffsetThreshold > kRefreshViewHeight && self.scrollView.isDragging) {
+        }else if (_currentOffsetY <= newOffsetThreshold * 2 && self.scrollView.isDragging) {
             self.refreshState = CCEaseRefreshStateTrigger;
-        }else if (fabs(_currentOffsetY) - newOffsetThreshold <= kRefreshViewHeight && fabs(_currentOffsetY) > newOffsetThreshold && _refreshState != CCEaseRefreshStateLoading) {
+        }else if (_currentOffsetY < newOffsetThreshold && _currentOffsetY > newOffsetThreshold * 2  && _refreshState != CCEaseRefreshStateLoading) {
             self.refreshState = CCEaseRefreshStateVisible;
-        }else if (fabs(_currentOffsetY) <= newOffsetThreshold && _refreshState != CCEaseRefreshStateDefault && _refreshState != CCEaseRefreshStateLoading) {
+        }else if (_currentOffsetY >= newOffsetThreshold && _refreshState != CCEaseRefreshStateDefault && _refreshState != CCEaseRefreshStateLoading) {
             // refreshState != CCRefreshDefault:进入默认状态后,在没有做上拉或下拉刷新时,不给refreshState的setter方法,从而启到优化程序的作用.想让谁少走几次owner != owner.
             self.refreshState = CCEaseRefreshStateDefault;
         }
-
         return;
     }
 }
