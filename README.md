@@ -25,6 +25,8 @@ CCEaseRefresh *refreshControl = [[CCEaseRefresh alloc] initInScrollView:self.tab
 `CCEaseRefresh`会不间断更新, 最后会走上Swift的不归路！
 > 1.0 仿照网易新闻version5.3.4的下拉刷新
 
-
 #### 作者 
 刘泽琛, 1040981145@qq.com
+
+#### 链接
+> 1.🌟星光闪烁特效: https://github.com/liuzechen/CC_Twinkle
