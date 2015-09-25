@@ -153,7 +153,7 @@
         case CCEaseRefreshStateVisible:
         {
             [self updateTime];
-            [self updateBallViwePosition];
+            [self updateBallLayerPosition];
         }
             break;
         case CCEaseRefreshStateTrigger:
@@ -167,7 +167,7 @@
             ei.top = ei.top + kRefreshViewHeight;
             [self updateContentInset:ei];
             [self updateTime];
-            [self updateBallViwePosition];
+            [self updateBallLayerPosition];
             [self updatecircleLayerPosition];
             [self sendActionsForControlEvents:UIControlEventValueChanged];
         }
@@ -178,7 +178,7 @@
 }
 
 #pragma mark - 更新(Layer的Frame、刷新的时间)
-- (void)updateBallViwePosition {
+- (void)updateBallLayerPosition {
     // fabs(_currentOffsetY) - _originalContentInset.top从0.f开始升序
     CGFloat ballLayerMinY = fabs(_currentOffsetY) - _originalContentInset.top + _defaultBallY;
     CGFloat ballLayerMaxY = _textY - kSubviewEdage - _ballHeight / 2;
