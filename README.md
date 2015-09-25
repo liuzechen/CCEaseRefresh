@@ -28,5 +28,8 @@ CCEaseRefresh *refreshControl = [[CCEaseRefresh alloc] initInScrollView:self.tab
 #### 作者 
 刘泽琛, 1040981145@qq.com
 
+#### 修复BUG
+> 0.1 修复程序调用beginRefreshing后小球不显示的问题。
+
 #### 链接
 > 1.🌟星光闪烁特效: https://github.com/liuzechen/CC_Twinkle
