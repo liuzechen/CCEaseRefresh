@@ -16,6 +16,7 @@
 #define kBallImage         [UIImage imageNamed:@"refresh_sphere"]
 #define kCircelImage       [UIImage imageNamed:@"refresh_circle"]
 #define kContentOffset     @"contentOffset"
+#define kAttributeDict     @{NSFontAttributeName: [UIFont systemFontOfSize:12.0]}
 
 @interface CCEaseRefresh () {
     CGFloat _ballWidth;     ///< 球的宽
@@ -23,6 +24,7 @@
     CGFloat _circleWidth;   ///< 圆的宽
     CGFloat _circleHeight;  ///< 圆的高
     CGFloat _defaultBallY;  ///< 球的初始Y
+    CGFloat _textX;         ///< 文本的X
     CGFloat _textY;         ///< 文本的Y
     CGFloat _currentOffsetY;///< scrollView的当前offset的Y
 }
@@ -69,24 +71,23 @@
 }
 
 - (void)drawRect:(CGRect)rect {
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    CGContextSetLineWidth(context, 1.0);
-    CGContextSetRGBFillColor (context, 0.2, 0.2, 0.2, 0.2);
-    UIFont *font = [UIFont systemFontOfSize:12.0];
-    NSDictionary *dict = @{NSFontAttributeName: font};
-    CGSize textSize = [_lastUpdateTimeString boundingRectWithSize:CGSizeMake(MAXFLOAT, MAXFLOAT) options:NSStringDrawingUsesFontLeading | NSStringDrawingUsesLineFragmentOrigin attributes:dict context:nil].size;
-    CGFloat textWidth  = textSize.width;
-    CGFloat textHeight = textSize.height;
-    if (_textY == 0) {
-        _textY = self.frame.size.height - textHeight - kSubviewEdage;
+    [self calcTextXY];
+    [_lastUpdateTimeString drawAtPoint:CGPointMake(_textX, _textY) withAttributes:kAttributeDict];
+}
+
+- (void)calcTextXY {
+    if (_textY == 0 || _textX == 0) {
+        CGSize textSize = [_lastUpdateTimeString boundingRectWithSize:CGSizeMake(MAXFLOAT, MAXFLOAT) options:NSStringDrawingUsesFontLeading | NSStringDrawingUsesLineFragmentOrigin attributes:kAttributeDict context:nil].size;
+        _textY = self.frame.size.height - textSize.height - kSubviewEdage;
+        _textX = (self.frame.size.width - textSize.width) / 2;
     }
-    [_lastUpdateTimeString drawAtPoint:CGPointMake((self.frame.size.width - textWidth) / 2, _textY) withAttributes:dict];
 }
 
 #pragma mark - 加载零件
 - (void)loadComponent {
     [self updateTime];
-
+    [self calcTextXY];
+    
     // 球和圆View
     _ballWidth = kBallImage.size.width   - kSubviewEdage / 2;
     _ballHeight = kBallImage.size.height - kSubviewEdage / 2;

@@ -71,6 +71,7 @@
 				7EB5F4131BAC3D5F00EF7A25 /* Products */,
 			);
 			sourceTree = "<group>";
+			wrapsLines = 1;
 		};
 		7EB5F4131BAC3D5F00EF7A25 /* Products */ = {
 			isa = PBXGroup;

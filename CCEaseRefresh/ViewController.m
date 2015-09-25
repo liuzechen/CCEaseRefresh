@@ -35,6 +35,10 @@
     imageView.clipsToBounds = YES;
     imageView.image = dabai;
     self.tableView.tableHeaderView = imageView;
+
+
+    // Cocoachina一位朋友'favormm': 有一个新功能可以加入，比如有的页面进去后就会自动刷新，调用[self.refreshView beginRefreshing];  球不可见。可以修复一下。
+    [self.refreshView beginRefreshing];
 }
 
 - (void)dropViewDidBeginRefreshing:(CCEaseRefresh *)refreshControl {
