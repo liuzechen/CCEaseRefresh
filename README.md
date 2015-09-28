@@ -6,9 +6,9 @@
 如您搜到`CCEaseRefresh`, 请star予以支持(*^__^*) ……
 
 #### 如何使用
-```
-OBJECTIVE-C :sparkles:
 
+##### OBJECTIVE-C :sparkles:
+```
 #import "CCEaseRefresh.h"
 // 初始化
 CCEaseRefresh *refreshControl = [[CCEaseRefresh alloc] initInScrollView:self.tableView];
@@ -21,9 +21,10 @@ CCEaseRefresh *refreshControl = [[CCEaseRefresh alloc] initInScrollView:self.tab
 
 // 停止刷新
 [refreshControl endRefreshing];
+```	
 
-SWIFT :sparkles:
-
+##### SWIFT :sparkles:
+```	
 // 初始化
 var refresh: CCEaseRefreshrefresh = CCEaseRefresh(scrollView: self.tableView)
 
@@ -35,7 +36,6 @@ refresh.beginRefreshing()
 
 // 停止刷新
 refresh.endRefreshing()
-
 ```	
 #### 更新
 `CCEaseRefresh`会不间断更新！
