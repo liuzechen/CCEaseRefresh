@@ -11,13 +11,10 @@
 #import "CCEaseRefresh.h"
 初始化
 CCEaseRefresh *refreshControl = [[CCEaseRefresh alloc] initInScrollView:self.tableView];
-
 添加相应事件
 [refreshControl addTarget:self action:@selector(dropViewDidBeginRefreshing:) forControlEvents:UIControlEventValueChanged];
-
 开始刷新
 [refreshControl beginRefreshing];
-
 停止刷新
 [refreshControl endRefreshing];
 ```
