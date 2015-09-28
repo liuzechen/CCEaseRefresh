@@ -31,7 +31,7 @@ class SwiftViewController: UIViewController {
 
         // 配置 refresh
         refresh = CCEaseRefresh(scrollView: self.tableView)
-        refresh.addTarget(self, action: Selector("dropRefresh:"), forControlEvents: UIControlEvents.ValueChanged)
+        refresh.addTarget(self, action: Selector("dropViewDidBeginRefreshing:"), forControlEvents: UIControlEvents.ValueChanged)
 
         // 自动刷新
         refresh.beginRefreshing()
@@ -51,7 +51,7 @@ class SwiftViewController: UIViewController {
     }
 
     // 开始刷新
-    func dropRefresh(refresh: CCEaseRefresh) {
+    func dropViewDidBeginRefreshing(refresh: CCEaseRefresh) {
         self.performSelector(Selector("stopRefresh"), withObject: nil, afterDelay: 3)
     }
 

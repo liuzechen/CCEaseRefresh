@@ -5,24 +5,40 @@
 `CCEaseRefresh`是仿照网易新闻version5.3.4的下拉刷新。继承UIControl, 简单易用。
 如您搜到`CCEaseRefresh`, 请star予以支持(*^__^*) ……
 
-### 如何使用
+#### 如何使用
 ```
-#import "CCEaseRefresh.h"
-// 初始化
-CCEaseRefresh *refreshControl = [[CCEaseRefresh alloc] initInScrollView:self.tableView];
+OBJECTIVE-C
 
-// 添加相应事件
-[refreshControl addTarget:self action:@selector(dropViewDidBeginRefreshing:) forControlEvents:UIControlEventValueChanged];
+> #import "CCEaseRefresh.h"
+> // 初始化
+> CCEaseRefresh *refreshControl = [[CCEaseRefresh alloc] initInScrollView:self.tableView];
 
-// 开始刷新
-[refreshControl beginRefreshing];
+> // 添加相应事件
+> [refreshControl addTarget:self action:@selector(dropViewDidBeginRefreshing:) forControlEvents:UIControlEventValueChanged];
 
-// 停止刷新
-[refreshControl endRefreshing];
+> // 开始刷新
+> [refreshControl beginRefreshing];
+
+> // 停止刷新
+> [refreshControl endRefreshing];
+
+SWIFT
+
+> // 初始化
+> var refresh: CCEaseRefreshrefresh = CCEaseRefresh(scrollView: self.tableView)
+
+> // 添加相应事件
+> refresh.addTarget(self, action: Selector("dropViewDidBeginRefreshing:"), forControlEvents: UIControlEvents.ValueChanged)
+
+> // 开始刷新
+> refresh.beginRefreshing()
+
+> // 停止刷新
+> refresh.endRefreshing()
 
 ```	
 #### 更新
-`CCEaseRefresh`会不间断更新, 最后会走上Swift的不归路！
+`CCEaseRefresh`会不间断更新！
 > 1.0 仿照网易新闻version5.3.4的下拉刷新
 
 #### 作者 
