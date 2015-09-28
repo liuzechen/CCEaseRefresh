@@ -58,6 +58,7 @@
 }
 
 - (void)dealloc {
+    printf("CCEaseRefresh(OC) deinit...\n");
     [self.scrollView removeObserver:self forKeyPath:kContentOffset];
     self.scrollView = nil;
 }
@@ -209,7 +210,7 @@
 
 // 更新contentInset
 - (void)updateContentInset:(UIEdgeInsets)ei {
-    [UIView animateWithDuration:.35 animations:^{
+    [UIView animateWithDuration:.25 animations:^{
         _scrollView.contentInset = ei;
     }];
 }

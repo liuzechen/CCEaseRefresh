@@ -1,34 +1,42 @@
 //
-//  ViewController.m
-//  NetEaseRefresh
+//  OCViewController.m
+//  CCEaseRefresh
 //
-//  Created by v－ling on 15/9/18.
-//  Copyright (c) 2015年 LiuZeChen. All rights reserved.
+//  Created by v－ling on 15/9/28.
+//  Copyright © 2015年 LiuZechen qq:1040981145. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "OCViewController.h"
 #import "CCEaseRefresh.h"
 
-@interface ViewController ()
+@interface OCViewController ()
 
-@property (weak, nonatomic)   IBOutlet UITableView *tableView;
 @property (strong, nonatomic) CCEaseRefresh *refreshView;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
-@implementation ViewController
+@implementation OCViewController
+
+- (void)dealloc
+{
+    printf("OCViewController dealloc ...\n");
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+
+    [self.refreshView endRefreshing];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    self.title = @"CCEaseRefresh";
+
+    // config table
     self.tableView.tableFooterView = [UIView new];
     self.tableView.contentInset = UIEdgeInsetsMake(64, 0, 0, 0);
     self.tableView.scrollIndicatorInsets = UIEdgeInsetsMake(64, 0, 0, 0);
-    
-    self.refreshView = [[CCEaseRefresh alloc] initInScrollView:self.tableView];
-    [self.refreshView addTarget:self action:@selector(dropViewDidBeginRefreshing:) forControlEvents:UIControlEventValueChanged];
-    
+    self.automaticallyAdjustsScrollViewInsets = NO;
     UIImage *dabai = [UIImage imageNamed:@"dabai.jpg"];
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, dabai.size.height)];
     imageView.contentMode = UIViewContentModeScaleAspectFill;
@@ -36,8 +44,11 @@
     imageView.image = dabai;
     self.tableView.tableHeaderView = imageView;
 
+    // config refresh
+    self.refreshView = [[CCEaseRefresh alloc] initInScrollView:self.tableView];
+    [self.refreshView addTarget:self action:@selector(dropViewDidBeginRefreshing:) forControlEvents:UIControlEventValueChanged];
 
-    // Cocoachina一位朋友'favormm': 有一个新功能可以加入，比如有的页面进去后就会自动刷新，调用[self.refreshView beginRefreshing];  球不可见。可以修复一下。
+    // auto refresh
     [self.refreshView beginRefreshing];
 }
 

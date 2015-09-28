@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		026E6F1D1BB8EA12002B57DD /* CCEaseRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026E6F1C1BB8EA12002B57DD /* CCEaseRefresh.swift */; settings = {ASSET_TAGS = (); }; };
+		026E6F251BB8EA44002B57DD /* OCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 026E6F201BB8EA44002B57DD /* OCViewController.m */; settings = {ASSET_TAGS = (); }; };
+		026E6F261BB8EA44002B57DD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 026E6F221BB8EA44002B57DD /* ViewController.m */; settings = {ASSET_TAGS = (); }; };
+		026E6F271BB8EA44002B57DD /* SwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026E6F241BB8EA44002B57DD /* SwiftViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		7EB5F4181BAC3D5F00EF7A25 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EB5F4171BAC3D5F00EF7A25 /* main.m */; };
 		7EB5F41B1BAC3D5F00EF7A25 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EB5F41A1BAC3D5F00EF7A25 /* AppDelegate.m */; };
-		7EB5F41E1BAC3D5F00EF7A25 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EB5F41D1BAC3D5F00EF7A25 /* ViewController.m */; };
 		7EB5F4211BAC3D5F00EF7A25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EB5F41F1BAC3D5F00EF7A25 /* Main.storyboard */; };
 		7EB5F4231BAC3D5F00EF7A25 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EB5F4221BAC3D5F00EF7A25 /* Images.xcassets */; };
 		7EB5F4261BAC3D5F00EF7A25 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EB5F4241BAC3D5F00EF7A25 /* LaunchScreen.xib */; };
@@ -28,13 +31,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		026E6F1B1BB8EA11002B57DD /* CCEaseRefresh-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CCEaseRefresh-Bridging-Header.h"; sourceTree = "<group>"; };
+		026E6F1C1BB8EA12002B57DD /* CCEaseRefresh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCEaseRefresh.swift; sourceTree = "<group>"; };
+		026E6F1F1BB8EA44002B57DD /* OCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCViewController.h; sourceTree = "<group>"; };
+		026E6F201BB8EA44002B57DD /* OCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCViewController.m; sourceTree = "<group>"; };
+		026E6F211BB8EA44002B57DD /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		026E6F221BB8EA44002B57DD /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		026E6F241BB8EA44002B57DD /* SwiftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftViewController.swift; sourceTree = "<group>"; };
 		7EB5F4121BAC3D5F00EF7A25 /* CCEaseRefresh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CCEaseRefresh.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EB5F4161BAC3D5F00EF7A25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7EB5F4171BAC3D5F00EF7A25 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7EB5F4191BAC3D5F00EF7A25 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7EB5F41A1BAC3D5F00EF7A25 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		7EB5F41C1BAC3D5F00EF7A25 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		7EB5F41D1BAC3D5F00EF7A25 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		7EB5F4201BAC3D5F00EF7A25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7EB5F4221BAC3D5F00EF7A25 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		7EB5F4251BAC3D5F00EF7A25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -63,6 +71,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		026E6F1E1BB8EA44002B57DD /* OC */ = {
+			isa = PBXGroup;
+			children = (
+				026E6F211BB8EA44002B57DD /* ViewController.h */,
+				026E6F221BB8EA44002B57DD /* ViewController.m */,
+				026E6F1F1BB8EA44002B57DD /* OCViewController.h */,
+				026E6F201BB8EA44002B57DD /* OCViewController.m */,
+			);
+			path = OC;
+			sourceTree = "<group>";
+		};
+		026E6F231BB8EA44002B57DD /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				026E6F241BB8EA44002B57DD /* SwiftViewController.swift */,
+			);
+			path = Swift;
+			sourceTree = "<group>";
+		};
 		7EB5F4091BAC3D5F00EF7A25 = {
 			isa = PBXGroup;
 			children = (
@@ -85,11 +112,11 @@
 		7EB5F4141BAC3D5F00EF7A25 /* CCEaseRefresh */ = {
 			isa = PBXGroup;
 			children = (
-				7EB5F43B1BAC3DF600EF7A25 /* CCEaseRefresh */,
 				7EB5F4191BAC3D5F00EF7A25 /* AppDelegate.h */,
 				7EB5F41A1BAC3D5F00EF7A25 /* AppDelegate.m */,
-				7EB5F41C1BAC3D5F00EF7A25 /* ViewController.h */,
-				7EB5F41D1BAC3D5F00EF7A25 /* ViewController.m */,
+				7EB5F43B1BAC3DF600EF7A25 /* CCEaseRefresh */,
+				026E6F1E1BB8EA44002B57DD /* OC */,
+				026E6F231BB8EA44002B57DD /* Swift */,
 				7EB5F41F1BAC3D5F00EF7A25 /* Main.storyboard */,
 				7EB5F4221BAC3D5F00EF7A25 /* Images.xcassets */,
 				7EB5F4241BAC3D5F00EF7A25 /* LaunchScreen.xib */,
@@ -129,6 +156,8 @@
 			children = (
 				7EB5F43C1BAC3DF600EF7A25 /* CCEaseRefresh.h */,
 				7EB5F43D1BAC3DF600EF7A25 /* CCEaseRefresh.m */,
+				026E6F1C1BB8EA12002B57DD /* CCEaseRefresh.swift */,
+				026E6F1B1BB8EA11002B57DD /* CCEaseRefresh-Bridging-Header.h */,
 			);
 			path = CCEaseRefresh;
 			sourceTree = "<group>";
@@ -177,6 +206,7 @@
 		7EB5F40A1BAC3D5F00EF7A25 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = "LiuZechen qq:1040981145";
 				TargetAttributes = {
@@ -233,10 +263,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7EB5F41E1BAC3D5F00EF7A25 /* ViewController.m in Sources */,
+				026E6F261BB8EA44002B57DD /* ViewController.m in Sources */,
 				7EB5F43E1BAC3DF600EF7A25 /* CCEaseRefresh.m in Sources */,
+				026E6F251BB8EA44002B57DD /* OCViewController.m in Sources */,
 				7EB5F41B1BAC3D5F00EF7A25 /* AppDelegate.m in Sources */,
 				7EB5F4181BAC3D5F00EF7A25 /* main.m in Sources */,
+				026E6F1D1BB8EA12002B57DD /* CCEaseRefresh.swift in Sources */,
+				026E6F271BB8EA44002B57DD /* SwiftViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,10 +395,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = CCEaseRefresh/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CCEaseRefresh/CCEaseRefresh/CCEaseRefresh-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -373,10 +409,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = CCEaseRefresh/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CCEaseRefresh/CCEaseRefresh/CCEaseRefresh-Bridging-Header.h";
 			};
 			name = Release;
 		};
