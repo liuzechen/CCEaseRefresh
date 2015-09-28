@@ -6,7 +6,7 @@
 如您搜到`CCEaseRefresh`, 请star予以支持(*^__^*) ……
 
 #### 如何使用
-OBJECTIVE-C
+> OBJECTIVE-C
 ```
 #import "CCEaseRefresh.h"
 // 初始化
@@ -22,7 +22,7 @@ CCEaseRefresh *refreshControl = [[CCEaseRefresh alloc] initInScrollView:self.tab
 [refreshControl endRefreshing];
 ```	
 
-SWIFT
+> SWIFT
 ```	
 // 初始化
 var refresh: CCEaseRefreshrefresh = CCEaseRefresh(scrollView: self.tableView)
