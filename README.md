@@ -9,35 +9,18 @@
 > OBJECTIVE-C 
 ```
 #import "CCEaseRefresh.h"
-// 初始化
+初始化
 CCEaseRefresh *refreshControl = [[CCEaseRefresh alloc] initInScrollView:self.tableView];
 
-// 添加相应事件
+添加相应事件
 [refreshControl addTarget:self action:@selector(dropViewDidBeginRefreshing:) forControlEvents:UIControlEventValueChanged];
 
-// 开始刷新
+开始刷新
 [refreshControl beginRefreshing];
 
-// 停止刷新
+停止刷新
 [refreshControl endRefreshing];
-```	
->
-
-> SWIFT
-```	
-// 初始化
-var refresh: CCEaseRefreshrefresh = CCEaseRefresh(scrollView: self.tableView)
-
-// 添加相应事件
-refresh.addTarget(self, action: Selector("dropViewDidBeginRefreshing:"), forControlEvents: UIControlEvents.ValueChanged)
-
-// 开始刷新
-refresh.beginRefreshing()
-
-// 停止刷新
-refresh.endRefreshing()
 ```
->
 
 #### 更新
 `CCEaseRefresh`会不间断更新！
