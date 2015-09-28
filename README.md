@@ -20,6 +20,7 @@ CCEaseRefresh *refreshControl = [[CCEaseRefresh alloc] initInScrollView:self.tab
 ```
 
 > SWIFT
+```
 // 初始化
 var refresh: CCEaseRefreshrefresh = CCEaseRefresh(scrollView: self.tableView)
 // 添加相应事件
