@@ -7,7 +7,7 @@
 
 #### 如何使用
 
-##### OBJECTIVE-C :sparkles:
+> ##### OBJECTIVE-C
 ```
 #import "CCEaseRefresh.h"
 // 初始化
@@ -23,7 +23,7 @@ CCEaseRefresh *refreshControl = [[CCEaseRefresh alloc] initInScrollView:self.tab
 [refreshControl endRefreshing];
 ```	
 
-##### SWIFT :sparkles:
+> ##### SWIFT
 ```	
 // 初始化
 var refresh: CCEaseRefreshrefresh = CCEaseRefresh(scrollView: self.tableView)
