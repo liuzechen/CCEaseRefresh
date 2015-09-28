@@ -7,34 +7,34 @@
 
 #### 如何使用
 ```
-OBJECTIVE-C
+OBJECTIVE-C :sparkles:
 
-> #import "CCEaseRefresh.h"
-> // 初始化
-> CCEaseRefresh *refreshControl = [[CCEaseRefresh alloc] initInScrollView:self.tableView];
+#import "CCEaseRefresh.h"
+// 初始化
+CCEaseRefresh *refreshControl = [[CCEaseRefresh alloc] initInScrollView:self.tableView];
 
-> // 添加相应事件
-> [refreshControl addTarget:self action:@selector(dropViewDidBeginRefreshing:) forControlEvents:UIControlEventValueChanged];
+// 添加相应事件
+[refreshControl addTarget:self action:@selector(dropViewDidBeginRefreshing:) forControlEvents:UIControlEventValueChanged];
 
-> // 开始刷新
-> [refreshControl beginRefreshing];
+// 开始刷新
+[refreshControl beginRefreshing];
 
-> // 停止刷新
-> [refreshControl endRefreshing];
+// 停止刷新
+[refreshControl endRefreshing];
 
-SWIFT
+SWIFT :sparkles:
 
-> // 初始化
-> var refresh: CCEaseRefreshrefresh = CCEaseRefresh(scrollView: self.tableView)
+// 初始化
+var refresh: CCEaseRefreshrefresh = CCEaseRefresh(scrollView: self.tableView)
 
-> // 添加相应事件
-> refresh.addTarget(self, action: Selector("dropViewDidBeginRefreshing:"), forControlEvents: UIControlEvents.ValueChanged)
+// 添加相应事件
+refresh.addTarget(self, action: Selector("dropViewDidBeginRefreshing:"), forControlEvents: UIControlEvents.ValueChanged)
 
-> // 开始刷新
-> refresh.beginRefreshing()
+// 开始刷新
+refresh.beginRefreshing()
 
-> // 停止刷新
-> refresh.endRefreshing()
+// 停止刷新
+refresh.endRefreshing()
 
 ```	
 #### 更新
