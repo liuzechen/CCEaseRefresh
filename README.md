@@ -1,6 +1,6 @@
 ![image](https://github.com/liuzechen/CCEaseRefresh/raw/master/CCEaseRefresh.gif)
 
-#CCEaseRefresh :sparkles:
+## CCEaseRefresh :sparkles:
 
 `CCEaseRefresh`是仿照网易新闻version5.3.4的下拉刷新。继承UIControl, 简单易用。
 如您搜到`CCEaseRefresh`, 请star予以支持(*^__^*) ……
@@ -9,41 +9,25 @@
 > OBJECTIVE-C 
 ```
 #import "CCEaseRefresh.h"
-/**
- * 初始化
- */
+// 初始化
 CCEaseRefresh *refreshControl = [[CCEaseRefresh alloc] initInScrollView:self.tableView];
-/**
- * 添加相应事件
- */
+// 添加相应事件
 [refreshControl addTarget:self action:@selector(dropViewDidBeginRefreshing:) forControlEvents:UIControlEventValueChanged];
-/**
- * 开始刷新
- */
+// 开始刷新
 [refreshControl beginRefreshing];
-/**
- * 停止刷新
- */
+// 停止刷新
 [refreshControl endRefreshing];
 ```
 
 > SWIFT
 ```
-/**
- * 初始化
- */
+// 初始化
 var refresh: CCEaseRefreshrefresh = CCEaseRefresh(scrollView: self.tableView)
-/**
- * 添加相应事件
- */
+// 添加相应事件
 refresh.addTarget(self, action: Selector("dropViewDidBeginRefreshing:"), forControlEvents: UIControlEvents.ValueChanged)
-/**
- * 开始刷新
- */
+// 开始刷新
 refresh.beginRefreshing()
-/**
- * 停止刷新
- */
+// 停止刷新
 refresh.endRefreshing()
 ```
 
