@@ -36,7 +36,8 @@ refresh.endRefreshing()
 > 1.0 仿照网易新闻version5.3.4的下拉刷新
 
 #### 作者 
-审了个美
+抖音: 审了个美(slgmoon)
+
 
 #### BUG
 > 0.1 修复程序调用beginRefreshing后小球不显示的问题。
